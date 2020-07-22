@@ -1,0 +1,34 @@
+pipeline
+{
+agent any
+stages
+{
+  stage('one')
+   {
+    steps
+    {
+      echo "Hello Jenkins from git"
+    }
+   }
+   stage('Two')
+   {
+    steps
+    {
+      input('Do u want to continue?')
+    }
+   }
+   stage('Three')
+   {
+    when{
+        not
+       {
+        branch "master"
+        }
+      }
+      steps
+      {
+      echo "hello in master"
+      }
+   }
+}
+}
