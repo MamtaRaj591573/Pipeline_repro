@@ -39,7 +39,7 @@ stages
                            }
                             stage('Integration test') {
                               agent {
-                                    docker {
+                                    label {
                                             reuseNode true
                                             image 'ubuntu'
                                            }
