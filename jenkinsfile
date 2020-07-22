@@ -30,30 +30,6 @@ stages
       echo "hello in master"
       }
    }
-   stage('Four')
-   {
-      parallel
-      {
-        stage('unit test')
-        {
-          steps
-          {
-          echo "runnning unit test"
-          }
-        }
-        stage('integration test')
-        {
-          agent
-          {
-            docker
-            {
-              echo "running integration test'
-            }
-          }
-        }
-      }
-   }
-   
 }
 }
 
