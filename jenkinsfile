@@ -43,7 +43,13 @@ stages
         }
         stage('integration test')
         {
-         echo "running integration test"
+          agent
+          {
+            docker
+            {
+              echo "running integration test'
+            }
+          }
         }
       }
    }
