@@ -50,12 +50,14 @@ stages
             reuseNode false
             image 'ubuntu'
           }
-      }
-      steps
-      {
-        echo "running integration test"
-      }
-   }
+      	}
+     	 steps
+     	 {
+       		 echo "running integration test"
+     	 }
+   	}
+	}
+    }
 }
 }
 }
