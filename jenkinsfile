@@ -30,5 +30,31 @@ stages
       echo "hello in master"
       }
    }
+   stage('Four')
+   {
+    parallel
+    {
+      stage('unit test')
+      {
+        steps
+        {
+          echo "running unit test"
+        }
+      }
+      stage('Integration test')
+      {
+        agent 
+        {
+          docker
+          {
+            reuseNode false
+            image 'ubuntu'
+          }
+      }
+      steps
+      {
+        echo "running integration test"
+      }
+   }
 }
 }
