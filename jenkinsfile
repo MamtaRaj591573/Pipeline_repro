@@ -20,7 +20,7 @@ stages
    stage('Three')
    {
     when{
-        not
+       
        {
         branch "sub"
         }
