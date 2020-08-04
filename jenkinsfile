@@ -20,9 +20,9 @@ stages
    stage('Three')
    {
     when{      
-       not{
+       
           branch "master"
-         } 
+         
       }
       steps
       {
