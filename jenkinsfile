@@ -22,7 +22,7 @@ stages
     when{
         not
        {
-        branch "master"
+        branch "sub"
         }
       }
       steps
