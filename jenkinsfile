@@ -19,10 +19,9 @@ stages
    }
    stage('Three')
    {
-    when{
+    when{      
        
-       
-        branch "sub"
+        branch "master"
         
       }
       steps
